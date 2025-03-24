@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="x-ua-compatible" content="id-edge"/>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+        <meta http-equiv="cache-control" content="no-cache, no-store, max-age=0"/>
+        <meta http-equiv="pragma" content="no-cache"/>
+        <meta http-equiv="description" content="Contact or set an appointment with Ready2Clean. 
+        We will assist you with any cleaning requests and information you provide in the contact form. We'll be happy to hear from you."/>
+        <title>Ready2Clean | Contact</title>
+        <link rel="stylesheet" href="../public/css/contact.css"/>
+        <link rel="icon shortcut" href="../../public/icons/broom.png"/>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <meta http-equiv="content-security-policy" content="default-src 'self'; script-src 'self'; style-src 'self'"/>
+        <meta http-equiv="x-frame-options" content="sameorigin">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-icons">
+                    <div class="nav-light-icon nav-icon">
+                        <img src="./public/images/svg/noun-light-7167228.svg"/>
+                    </div>
+                    <div class="nav-state-icon nav-icon">
+                        <img src="./public/images/svg/noun-south-carolina-1695199.svg"/>
+                    </div>
+                </div>
+                <div class="nav-logo">
+                    <a href="/">
+                        <h1>ready 2</h1>
+                        <h1>clean.</h1>
+                    </a>
+                </div>
+                <div class="nav-menu-btn">
+                    <h2>menu.</h2>
+                    <span class="circ"></span>
+                </div>
+                <div class="nav-links-desk">
+                    <ul>
+                        <li>
+                            <a href="/">home</a>
+                        </li>
+                        <li>
+                            <a href="/about">about</a>
+                        </li>
+                        <li>
+                            <a href="/gallery">gallery</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="menu">
+            <div class="menu-header upper">
+                <h1>ready 2 clean</h1>
+            </div>
+            <ul class="menu-list mobile upper">
+                <li>
+                    <a href="/">
+                        home
+                    </a>
+                </li>
+                <li>
+                    <a href="/about">
+                        about
+                    </a>
+                </li>
+                <li>
+                    <a href="/gallery">
+                        gallery
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact" class="active">
+                        contact
+                    </a>
+                </li>
+            </ul>
+            <div class="exit upper">
+                <h1>exit</h1>
+            </div>
+        </div>
+        <div class="sub-nav upper">
+            <h3>03.</h3>
+            <h3>contact us.</h3>
+        </div>
+        <main>
+            <div class="container">
+                <div class="hero">
+                    <div class="hero-header">
+                        <h1>Let's Chat.</h1>
+                    </div>
+
+                    <div class="hero-info">
+                        <h3>Tell us about your cleaning requests, your personal information, and where you're located.</h3>
+
+                        <h3>We are located only in certain areas of South Carolina. Check out our <a href="/" id="lhome">home page</a> to view areas we clean.</h3>
+
+                        <h3>We will clean any area in your home. So, thanks in advance for your expected request.</h3>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <% if (errors.length > 0) { %> 
+                        <div class="form-errors">
+                        <%  errors.forEach((error) => { %>
+                          <h1 class="errors">* <%- error %></h1>
+                          <% }) %>
+                        </div>
+                      <% } %>
+                    
+                
+                    <div class="form">
+                        <form action="/contact" method="post" autocomplete="off" class="form-form">
+                            <div class="name">
+                                <p>Name</p>
+                                <input type="text" name="fullname" id="name" placeholder="Enter your name" class="name"/>
+                            </div>
+                            <div class="email">
+                                <p>Email</p>
+                                <input type="email" name="email" id="email" placeholder="Enter your email" class="email"/>
+                            </div>
+                            <div class="phone">
+                                <p>Phone</p>
+                                <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" class="phone"/>
+                            </div>
+                            <div class="method">
+                                <p>Contact Method</p>
+                                <select id = "method" name="method">
+                                    <option disabled selected>Preferred Method of Contact</option>
+                                    <option>Email</option>
+                                    <option>Phone</option>
+                                </select>
+                            </div>
+                            <div class="schedule schedule-date">
+                                <h1>schedule now !</h1>
+
+                                <div class="planner">
+                                    <div class="date">
+                                        <p>Date</p>
+                                        <!-- <input type="date" id="date" name="date" value="2024-11-11" min="2024-11-11" max="2025-11-11"> -->
+                                        <input type="text" id="date" name="date" placeholder="" value="" class="date">
+                                    </div>
+                                    <div class="time">
+                                        <p>Time</p>
+                                        <input type="time" id="time" name="time" placeholder="Enter a time" class="time"/>
+                                    </div>
+                                    <div class="location">
+                                        <div class="city">
+                                            <p>City</p>
+                                            <input type="text" id="city" name="city" placeholder="Enter a city" class="city"/>
+                                        </div>
+                                        <div class="state">
+                                            <p>State</p>
+                                            <span>South Carolina</span>
+                                            <input type="hidden" id="state" name="state" placeholder="Enter a state" class="state" value="South Carolina"/>
+                                        </div>
+                                    </div>
+                                    <div class="address">
+                                        <p>Address</p>
+                                        <input type="text" id="address" name="address" placeholder="Enter your address" class="address"/>
+                                    </div>
+                                    <div class="zipcode">
+                                        <p>Zipcode</p>
+                                        <input type="text" id="zipcode" name="zipcode" placeholder="Enter your zipcode" class="zipcode"/>
+                                    </div>
+                                    
+
+                                    <div class="services">
+                                        <div class="services-header">
+                                            <h1>Services</h1>
+                                            <p>View more information about our services on the <a href="/">home page.</a></p>
+                                        </div>
+                                        <div class="services-info">
+                                            <div class="choice">
+                                                <input type="checkbox" name="service" id="kitchen-standard">
+                                                <p>Kitchen (Standard Cleaning)</p>
+                                                <input type="hidden" name="service" value="Kitchen (Standard Cleaning)"/>
+                                            </div>
+                                            <div class="choice">
+                                                <input type="checkbox" name="service" id="kitchen-deep">
+                                                <p>Kitchen (Deep Cleaning)</p>
+                                                <input type="hidden" name="service" value="Kitchen (Deep Cleaning)"/>
+                                            </div>
+                                            <div class="choice">
+                                                <input type="checkbox" name="service" id="living-standard">
+                                                <p>Living Room (Standard Cleaning)</p>
+                                                <input type="hidden" name="service" value="Living Room (Standard Cleaning)"/>
+                                            </div>
+                                            <div class="choice">
+                                                <input type="checkbox" name="service" id="living-deep">
+                                                <p>Living Room (Deep Cleaning)</p>
+                                                <input type="hidden" name="service" value="Kitchen (Deep Cleaning)"/>
+                                            </div>
+                                            <div class="choice">
+                                                <input type="checkbox" name="service" id="bathroom-standard">
+                                                <p>Bathroom (Standard Cleaning) * extra $10</p>
+                                                <input type="hidden" name="service" value="Bathroom (Standard Cleaning) extra $10"/>
+                                            </div>
+                                            <div class="choice">
+                                                <input type="checkbox" name="service" id="bathroom-deep">
+                                                <p>Bathroom (Deep Cleaning) * extra $10</p>
+                                                <input type="hidden" name="service" value="Bathroom (Deep Cleaning) extra $10"/>
+                                            </div>
+                                            <div class="choice">
+                                                <input type="checkbox" name="service" id="bedroom-standard">
+                                                <p>Bedroom (Standard Cleaning)</p>
+                                                <input type="hidden" name="service" value="Bedroom (Standard Cleaning)"/>
+                                            </div>
+                                            <div class="choice">
+                                                <input type="checkbox" name="service" id="bedroom-deep">
+                                                <p>Bedroom (Deep Cleaning)</p>
+                                                <input type="hidden" name="service" value="Bedroom (Deep Cleaning)"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="message">
+                                        <p>Message</p>
+                                        <textarea type="text" id="message" name="message" placeholder="Your Message..." ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="submit" value="Submit" id="submit-btn" class="submit-btn">
+                        </form>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content-header">
+                        <h1>Find out more information about our cleaning services ?</h1>
+                    </div>
+                    <div class="content-contact">
+                        <h3>Call us at &#8594; <a href="tel:+18438633952" id="contact-us">(843) 864-3952.</a></h3>
+                        <h3>Or send us an <a href="mailto:ready2cleancleaningserviceLLC@gmail.com" id="contact-us">email.</a></h3>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer upper">
+            <h1 class="footer-header">footer</h1>
+            <div class="container">
+                <div class="footer-footer">
+                    <div class="footer-footer-copy">
+                        <h5>developed by kam.</h5>
+                        <h5>&copy; 2025 Ready2Clean. All rights reserved.</h5>
+                    </div>
+                    <div class="footer-available">
+                        <span class="footer-available-icon">
+                            <span class="f-dot"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="footer-logo">r2c.</h1>
+        </footer>
+
+
+
+
+
+
+        <div class="calendar">
+           <div class="calendar-header">
+                <h1 class="upper curr-date curr-month">november 2024</h1>
+           </div>
+           <div class="arrows">
+                <div class="arrow-left">
+                    <span id="left" class="arrow-control a-left"></span>
+                </div>
+                <div class="arrow-right">
+                    <span id= "right" class="arrow-control a-right"></span>
+                </div>
+           </div>
+           <ul class="weeks">
+                <li>sun</li>
+                <li>mon</li>
+                <li>tue</li>
+                <li>wed</li>
+                <li>thu</li>
+                <li>fri</li>
+                <li>sat</li>
+           </ul>
+           <ul class="days">
+            <!-- <li>30</li> -->
+                <!-- <li>27</li>
+                <li>28</li>
+                <li>29</li>
+                <li>30</li>
+                <li>31</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li>19</li>
+                <li>20</li>
+                <li>21</li>
+                <li>22</li>
+                <li>23</li>
+                <li>24</li>
+                <li>25</li>
+                <li>26</li>
+                <li>27</li>
+                <li>28</li>
+                <li>29</li>
+                <li>30</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li> -->
+           </ul>
+        </div>
+    </body>
+    <script type="text/javascript" src="./public/js/contact.js"></script>
+</html>
+<!-- name email phone start time(day & time calendar api)  areas in home you request us to clean? (list) if other -> create input form and list 
+ all services inside box.   message-->

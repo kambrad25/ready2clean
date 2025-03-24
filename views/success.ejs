@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+        <title>Ready2Clean | Success</title>
+        <meta http-equiv="refresh" content="5"/>
+        <style>
+            @font-face {
+                font-family: "Roslindale Display Condensed, sans-serif";
+                src: url("../../public/fonts/Roslindale_Desktop/RoslindaleDisplayCondensed-Regular.otf")
+            }
+            *,
+            *::before,
+            *::after {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            html {
+                font-size: 62.5%;
+                height: 100%;
+            }
+            body {
+                min-height: 100%;
+                font-family: "Roslindale Display Condensed, sans-serif";
+                font-weight: 400;
+                line-height: 1.4;
+                color: white;
+                background-color: rgb(26, 85, 26);
+            }
+            
+          header {
+            height: 0;
+            min-height: 12rem;
+          }
+          nav {
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .container {
+            width: 100%;
+            max-width: 40rem;
+            text-align: center;
+            margin: auto;
+            padding: 1rem;
+          }
+          .nav-logo {
+            font-size: 2rem;
+            line-height: 1;
+            text-transform: uppercase;
+            /* border:1px solid; */
+            /* max-width: calc(100% - 10rem); */
+            margin: auto;
+            height: 10rem;
+            align-content: center;
+            border-bottom: 2px solid;
+          }
+          .nav-logo > h2 {
+            display: inline;
+            font-size: 4rem;
+          }
+          main > .container {
+            height: 30rem;
+            /* overflow-y: hidden; */
+          }
+          .header {
+            overflow: hidden;
+          }
+          .header > h1 {
+            font-size: 7.5rem;
+            /* font-size: 10rem; */
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            min-height: 20rem;
+          }
+          .header > h1 > span {
+            /* display: inline; */
+            position: relative;
+            top: 50rem;
+            transition: top 650ms ease-in;
+          }
+          .header > h1 > span:nth-child(1) {
+            /* top: 6rem; */
+            animation: s1 650ms forwards;
+          }
+          .header > h1 > span:nth-child(2) {
+            /* top: 3rem; */
+            animation: s2 650ms 50ms forwards;
+          }
+          .header > h1 > span:nth-child(3) {
+            /* top: 2rem; */
+            animation: s3 650ms 80ms forwards;
+          }
+          .header > h1 > span:nth-child(4) {
+            /* top: 1rem; */
+            animation: s4 650ms 110ms forwards;
+          }
+          .header > h1 > span:nth-child(5) {
+            /* top: 2rem; */
+            animation: s5 650ms 130ms forwards;
+          }
+          .header > h1 > span:nth-child(6) {
+            /* top: 3rem; */
+            animation: s6 650ms 160ms forwards;
+          }
+          .header > h1 > span:nth-child(7) {
+            /* top: 6rem; */
+            animation: s7 650ms 180ms forwards;
+          }
+         
+          .message {
+            height: calc(100% / 3.5);
+            align-content: center;
+          }
+          .message > h2 {
+            font-size: 2.3rem;
+            text-transform: capitalize;
+            opacity: 0;
+            animation: messageH2 2s forwards, rotate 2s alternate infinite;
+          }
+
+          @keyframes messageH2 {
+            to {
+                opacity: 1;
+            }
+          }
+
+          @keyframes rotate {
+            0% {
+                transform: rotate(-5deg);
+            }
+    
+           100% {
+                 transform: rotate(5deg);
+           }
+          }
+         
+
+          @keyframes s1 {
+            to {
+                top: 6rem;
+            }
+          }
+          @keyframes s2 {
+            to {
+                top: 3rem;
+            }
+          }
+          @keyframes s3 {
+            to {
+                top: 2rem;
+            }
+          }
+          @keyframes s4 {
+            to {
+                top: 1rem;
+            }
+          }
+          @keyframes s5 {
+            to {
+                top: 2rem;
+            }
+          }
+          @keyframes s6{
+            to {
+                top: 3rem;
+            }
+          }
+          @keyframes s7 {
+            to {
+                top: 6rem;
+            }
+          }
+
+          @media (min-width: 300px) {
+            .header > h1 {
+                font-size: 7.5rem;
+            }
+            .message {
+                width: 20rem;
+                margin: auto;
+            }
+            .message > h2 {
+                font-size: 2.5rem;
+                text-align: center;
+                font-weight: 100;
+            }
+          }
+
+          @media (min-width: 600px) {
+            .header > h1 {
+                font-size: 10rem;
+            }
+            .message {
+                width: max-content;
+            }
+            .message > h2 {
+                font-size: 2rem;
+                /* width: max-content\; */
+                animation: messageH2 2s forwards;
+            } 
+          }
+
+          @media (min-width: 750px) {
+            .container {
+                max-width: 70rem;
+            }
+            main > .container {
+                height: 60rem;
+            }
+            .header > h1 {
+                font-size: 15rem;
+                min-height: 25rem;
+            }
+          }
+          @media (min-width: 1000px) {
+            .header > h1 {
+                font-size: 25rem
+            }
+            main > .container {
+                max-width: 100%;
+            }
+          }
+          @media (min-width: 1300px) {
+            .header > h1 {
+                font-size: 30rem;
+            }
+          }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="container">
+                    <div class="nav-logo">
+                        <h2>ready 2</h2>
+                        <h2>clean</h2>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <div class="header success_head">
+                    <h1>
+                        <!-- success -->
+                        <span>
+                            s
+                        </span>
+                        <span>u</span>
+                        <span>c</span>
+                        <span>c</span>
+                        <span>e</span>
+                        <span>s</span>
+                        <span>s</span>
+                    </h1>
+                </div>
+
+                <div class="message deg">
+                    <h2>Thank you, we will get with you shortly!</h2>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script type="text/javascript"></script>
+</html>
+
+<!-- success
+ we sent you an email containing your service.
+ we will get back with you shortly. -->

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Ready2Clean | 500</title>
+        <link rel="stylesheet" type="text/css" href="../../public/css/404.css"/>
+        <meta http-equiv="content-security-policy" content="default-src 'self' style-src 'unsafe-inline' script-src 'self'"/>
+    </head>
+    
+    <body class="<%= code = '500' ? 'error_status_style' : '' %>">
+        <%- include ("../partials/nav.ejs") %>
+        <main>
+            <div class="container">
+                <div class="error-container">
+                    <h1 class="error-status" id="status">
+                        <span>5</span>
+                        <span>0</span>
+                        <span>0</span>
+                    </h1>
+                    <h3 class="error-msg" data-status="500">internal server error</h3>
+                    <button class="btn go-home">
+                        <a href="/">home page</a>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script type="text/javascript" src="../../public/js/404.js"></script>
+</html>
