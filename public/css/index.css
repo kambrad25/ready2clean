@@ -1,18 +1,18 @@
 @font-face {
     font-family:"PP Neue Montreal Book";
-    src: url("./public/fonts/PP\ Neue\ Montreal\ -\ Free\ for\ Personal\ Use\ v2.6/OTF/PPNeueMontreal-Book.otf");
+    src: url("/fonts/PP\ Neue\ Montreal\ -\ Free\ for\ Personal\ Use\ v2.6/OTF/PPNeueMontreal-Book.otf");
 }
 @font-face {
     font-family: "PP Neue Montreal Thin";
-    src: url("./public/fonts/PP\ Neue\ Montreal\ -\ Free\ for\ Personal\ Use\ v2.6/OTF/PPNeueMontreal-Thin.otf");
+    src: url("/fonts/PP\ Neue\ Montreal\ -\ Free\ for\ Personal\ Use\ v2.6/OTF/PPNeueMontreal-Thin.otf");
 }
 @font-face {
     font-family: "PP Gatwick Jet Extralight";
-    src: url("./public/fonts/PP\ Gatwick\ -\ Free\ for\ Personal\ Use\ v2.0/otf/PPGatwick-JetExtralight.otf");
+    src: url("./fonts/fonts/PP\ Gatwick\ -\ Free\ for\ Personal\ Use\ v2.0/otf/PPGatwick-JetExtralight.otf");
 }
 @font-face {
     font-family: "Roslindale Display Condensed, sans-serif";
-    src: url("./public/fonts/Roslindale_Web/fonts/RoslindaleDisplayCondensed-Regular.woff");
+    src: url("/fonts/Roslindale_Web/fonts/RoslindaleDisplayCondensed-Regular.woff");
 }
 :root {
     --font-family-one: "PP Neue Montreal Book";
