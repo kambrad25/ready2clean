@@ -425,8 +425,8 @@ app.use((err, req, res, next) => {
     if (err.status !== undefined || err.status == null) {
         res.statusCode = 500;
         let status = res.statusCode;
-        res.status(status).contentType("html").render("./errors/500", { code: status.toString() });
-        log (message)
+        // res.status(status).contentType("html").render("./errors/500", { code: status.toString() });
+        // log (message)
     }
 })
 
