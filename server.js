@@ -431,16 +431,16 @@ app.post("/contact", setXFrameOptions, async (req, res) => {
 app.use(errorHandler);
 
 
-app.use((err, req, res, next) => {
-    const { message } = err;
-    err.status = res.statusCode;
-    if (err.status !== undefined || err.status == null) {
-        res.statusCode = 500;
-        let status = res.statusCode;
-        res.status(status).contentType("html").render("500", { code: status.toString() });
-        log (message)
-    }
-})
+// app.use((err, req, res, next) => {
+//     const { message } = err;
+//     err.status = res.statusCode;
+//     if (err.status !== undefined || err.status == null) {
+//         res.statusCode = 500;
+//         let status = res.statusCode;
+//         res.status(status).contentType("html").render("500", { code: status.toString() });
+//         log (message)
+//     }
+// })
 
 
 
