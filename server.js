@@ -60,7 +60,7 @@ app.use(express.static(path.join(__dirname, "/"), { extensions: ['html']}));
 app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
 // app.use(express.static(__dirname + "/app/public/"));
-app.use(express.static(__dirname + "/public/"))
+app.use(express.static(path.join(__dirname, "/public/")));
 
 
 const connDatabase = (async () => {
