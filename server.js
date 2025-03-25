@@ -52,7 +52,10 @@ app.use(sessions(
     }
 ))
 
+app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
+
+
 
 const connDatabase = (async () => {
     const { connect } = mongoose;
