@@ -54,8 +54,8 @@ app.use(sessions(
 ))
 
 
-app.use(express.static(path.join(__dirname, "../"), { extensions: ['html']}));
-app.use(express.static(path.join(__dirname, "/"), { extensions: ['html']}));
+// app.use(express.static(path.join(__dirname, "../"), { extensions: ['html']}));
+// app.use(express.static(path.join(__dirname, "/"), { extensions: ['html']}));
 
 app.set("view engine", "ejs");
 
@@ -94,7 +94,7 @@ function errorHandler(req, res, next) {
 }
 
 app.get("/", setXFrameOptions, (req, res) => {
-    res.status(200).contentType("html").render("index.ejs")
+    res.status(200).contentType("html").render("index")
 })
 app.get("/about", setXFrameOptions, (req, res) => {
     res.status(200).contentType("html").render("about");
