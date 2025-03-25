@@ -54,8 +54,8 @@ app.use(sessions(
 ))
 
 
-// app.use(express.static(path.join(__dirname, "../"), { extensions: ['html']}));
-// app.use(express.static(path.join(__dirname, "/"), { extensions: ['html']}));
+app.use(express.static(path.join(__dirname, "../"), { extensions: ['html']}));
+app.use(express.static(path.join(__dirname, "/"), { extensions: ['html']}));
 
 app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
