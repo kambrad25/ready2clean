@@ -58,12 +58,12 @@ app.use(sessions(
 // app.use(express.static(path.join(__dirname, "/"), { extensions: ['html']}));
 
 
-app.set("views", __dirname + "/views");
+// app.set("views", __dirname + "/views/errors");
 app.set("view engine", "ejs");
 
 // app.use(express.static(__dirname + "/"));
 
-
+app.use(express.static(path.join(__dirname,"public","views")))
 app.use(express.static(path.join(__dirname,"public/")));
 
 
@@ -98,7 +98,7 @@ function setXFrameOptions (req, res, next) {
 
 
 function errorHandler(req, res, next) {    
-    res.status(404).render("./errors/404");
+    res.status(404).render("404");
 }
 
 app.get("/", setXFrameOptions, (req, res) => {
@@ -431,16 +431,16 @@ app.post("/contact", setXFrameOptions, async (req, res) => {
 app.use(errorHandler);
 
 
-// app.use((err, req, res, next) => {
-//     const { message } = err;
-//     err.status = res.statusCode;
-//     if (err.status !== undefined || err.status == null) {
-//         res.statusCode = 500;
-//         let status = res.statusCode;
-//         res.status(status).contentType("html").render("./errors/500", { code: status.toString() });
-//         log (message)
-//     }
-// })
+app.use((err, req, res, next) => {
+    const { message } = err;
+    err.status = res.statusCode;
+    if (err.status !== undefined || err.status == null) {
+        res.statusCode = 500;
+        let status = res.statusCode;
+        res.status(status).contentType("html").render("500", { code: status.toString() });
+        log (message)
+    }
+})
 
 
 
