@@ -223,13 +223,13 @@ async function mailer (__name__, __email__, __date__, __time__) {
         port: 25,
         secure: false,
         auth: {
-            user: "kamronbrad20@gmail.com",
-            pass: "wgrd myos dlyo wtfc"
+            user: "ready2clean123@gmail.com",
+            pass: process?.env.EMAIL_PASSKEY ? process?.env.EMAIL_PASSKEY : "wgrd myos dlyo wtfc"
         }
     })
     
     clientMail = await clientMail.sendMail({
-        from: "kamronbrad20@gmail.com",
+        from: "ready2clean123@gmail.com",
         to: __email__,
         subject: "Ready2Clean Notification",
         html: htmlMailTemplate
