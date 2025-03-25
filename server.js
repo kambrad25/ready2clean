@@ -94,7 +94,7 @@ function errorHandler(req, res, next) {
 }
 
 app.get("/", setXFrameOptions, (req, res) => {
-    res.status(200).contentType("html").render("index")
+    res.status(200).contentType("html").render("index.ejs")
 })
 app.get("/about", setXFrameOptions, (req, res) => {
     res.status(200).contentType("html").render("about");
