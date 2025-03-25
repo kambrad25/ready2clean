@@ -52,6 +52,8 @@ app.use(sessions(
     }
 ))
 
+app.set("View engine", "ejs");
+
 const connDatabase = (async () => {
     const { connect } = mongoose;
     const result = await connect(typeof process.env.MONGO_DB_USER == "string" ? process.env.MONGO_DB_USER : 
