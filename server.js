@@ -44,6 +44,7 @@ app.use(cors(
 ));
 
 
+
 app.use(sessions(
     {
         secret: process.env.SECRET,
@@ -52,10 +53,11 @@ app.use(sessions(
     }
 ))
 
-app.set("views", path.join(__dirname + "views"));
+
+app.use(express.static(path.join(__dirname, "../"), { extensions: ['html']}));
+app.use(express.static(path.join(__dirname, "/"), { extensions: ['html']}));
+
 app.set("view engine", "ejs");
-
-
 
 const connDatabase = (async () => {
     const { connect } = mongoose;
@@ -85,10 +87,7 @@ function setXFrameOptions (req, res, next) {
 }
 
 
-app.use(express.static(path.join(__dirname, "../"), { extensions: ['html']}));
-app.use(express.static(path.join(__dirname, "/"), { extensions: ['html']}));
 
-app.set("view engine", "ejs");
 
 function errorHandler(req, res, next) {    
     res.status(404).render("./errors/404");
