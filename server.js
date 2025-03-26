@@ -414,7 +414,7 @@ app.post("/contact", setXFrameOptions, async (req, res) => {
 
             await newUser.save();
 
-            await mailer(newUser.name, newUser.email, newUser.date, newUser.time).then().catch((err) => {
+            await mailer(newUser.name, newUser.email, newUser.date, newUser.time).then(() => log ("success")).catch((err) => {
                 throw err;
             })
 
@@ -423,7 +423,6 @@ app.post("/contact", setXFrameOptions, async (req, res) => {
             req.session.cookie.maxAge = 1000;
 
 
-            log (newUser);
            return res.status(200).redirect("/success")
 
         }       
