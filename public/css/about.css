@@ -790,6 +790,7 @@ footer > h3 {
 .nav-menu-mobile-list > h1 > a {
     /* opacity: 0; */
     opacity: 1;
+    color: black;
 }
 #nav-mobile-title {
     position: absolute;

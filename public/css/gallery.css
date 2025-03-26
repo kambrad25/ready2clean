@@ -467,25 +467,97 @@ footer {
     text-align: center;
     position: relative;
 }
-.nav-mobile-menu {
+.nav-menu-mobile {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    /* height: 100%; */
     height: 0;
-    overflow: hidden;
+    /* height: 100%; */
+    gap: 10rem;
     background-color: white;
-}
-.nav-mobile-menu-header {
-    text-align: center;
-    text-transform: uppercase;
-    /* border: 1px solid; */
-    /* min-height: 15rem; */
-    height: 10rem;
-    align-content: center;
+    display: grid;
+    z-index: 30;
 
+}
+
+.nav-menu-mobile-list {
+    padding: 10rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* nav menu mobile list animation */
+    display: none;
+}
+.nav-menu-mobile-list > h1 > a.active {
+    color: rgb(175, 24, 24);
+}
+.nav-menu-mobile-list > h1 {
+    /* height: min-content; */
+    position: relative;
+    text-align: center;
+    opacity: 0;
+
+    /* transform: scale(0) */
+}
+.nav-menu-mobile-list > h1 > a {
+    /* opacity: 0; */
+    opacity: 1;
+}
+#nav-mobile-title {
+    position: absolute;
+    /* right: 3rem; */
+    padding-left: 1rem;
+    top: 3rem;
+    font-size: 4rem;
+    text-align: center;
+    width: 100%;
+    font-weight: 600;;
+    /* color: rgb(175, 24, 24); */
+    cursor: pointer;
     transform: scale(0);
+    /* transform: scale(0); */
+}
+
+.nav-menu-mobile-list > h1:nth-child(2n + 1) {
+    text-align: start;
+    padding-left: 1rem;
+}  
+.nav-menu-mobile-list > h1:nth-child(2n) {
+    text-align: end;
+    padding-right: 1rem;
+} 
+.circ {
+    display: inline-block;
+    position: absolute;
+    border: 2px solid rgb(175, 24, 24);
+    top: 0;
+    right: 0;
+    width: 120px;
+    transform: translateY(-30%);
+    border-radius: 50%;
+    height: 120px;
+}
+.exit-menu {
+    position: absolute;
+    bottom: 25px;
+    left: 1rem;
+    width: 100%;
+    height: 6rem;
+    text-align: start;
+    font-size: 4rem;
+    font-weight: 800;
+    padding-left: 2rem;
+    transform: scale(0);
+    opacity: 0;
+    cursor: pointer;
+    border-bottom: 3px solid black;
+    width: calc(100% - 20px);
+
+}
+.active {
+    text-decoration: line-through;
+    pointer-events: none;
 }
 .nav-links {
     margin: auto;

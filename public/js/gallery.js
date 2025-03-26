@@ -9,9 +9,9 @@ const contactHeader = document.querySelectorAll(".contact-header");
 const contactInfo = document.querySelectorAll(".info");
 
 const navMenu = document.querySelector(".nav-menu-btn");
-const exit = document.querySelector(".exit");
-const navMMenu = document.querySelector(".nav-mobile-menu");
-const navMMenuHeader = document.querySelectorAll(".nav-mobile-menu > h2");
+const exit = document.querySelector("#exit");
+const navMMenu = document.querySelector(".nav-menu-mobile");
+const navMMenuHeader = document.querySelectorAll(".nav-mobile-title");
 
 const navLinksDesk = document.querySelector(".nav-links-desk");
 const navLinksDeskChild = navLinksDesk.children;
@@ -187,23 +187,28 @@ function gallery() {
                     }
                 );
 
-                ml.to(".nav-mobile-menu", .8, 
-                    {
-                        height: "100vh",
-                        
-                    }
-                )
-                .to(".nav-mobile-menu-header", 1, 
-                    {
-                        scale: 1
-                    }
-                )
-                .to(".nav-links > h2", 1, {
-                    opacity: 1,
-                    stagger: {
-                        amount: .3
-                    }
-                })
+                ml.to(".nav-menu-mobile", 1, {
+                    height: "100%"
+               })
+              .to(".nav-menu-mobile-list", .4,{
+                   display: "flex"
+               })
+               .to("#nav-mobile-title", .5, {
+                   scale: 1
+               })
+               .to(".nav-menu-mobile-list > h1", .5, {
+                   opacity: 1,
+                   stagger: { 
+                       amount: .5
+                   }
+               })
+          
+               .to (".exit-menu",.5, {
+                   scale: 1
+               })
+               .to (".exit-menu", .3, {
+                   opacity: 1
+               })
 
                 exit.addEventListener("click", (e) => {
                     ml.reverse();
