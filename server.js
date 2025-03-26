@@ -29,7 +29,6 @@ app.use(cookieParser(process.env.secret, {
     path: "/",
     secure: process.env.NODE_ENV == "production",
     httpOnly: process.env.NODE_ENV == "production",
-    sameSite: process.env.NODE_ENV == "production" ? "strict" : "none"
 
 }));
 

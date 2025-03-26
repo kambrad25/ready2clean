@@ -636,7 +636,7 @@ function home() {
             }
         } else {
             for (let i = 0; i < showcaseImages.length; ++i) {
-                showcaseImages[i].style.transform = "scale(0)";
+                showcaseImages[i].style.transform = "scale(1)";
             }
 
             // showcaseMore.style.width = "0%";
