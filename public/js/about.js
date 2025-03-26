@@ -511,12 +511,7 @@ const preload = () => {
                         amount: .5
                     }
                 })
-                // .to(".nav-menu-mobile-list > h1 > a", .5, {
-                //     opacity: 1,
-                //     stagger: {
-                //         amount: .5
-                //     }
-                // })
+           
                 .to (".exit-menu",.5, {
                     scale: 1
                 })
