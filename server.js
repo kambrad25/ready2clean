@@ -18,7 +18,7 @@ const mongoose = require("mongoose");
 const sessions = require("express-session");
 const client = require("./Models/Client");
 const nodeMailer = require("nodemailer");
-const MemoryStore = require("memorystore");
+const MemoryStore = require("memorystore")(sessions);
 require("dotenv").config();
 
 
