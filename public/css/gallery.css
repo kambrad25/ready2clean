@@ -533,7 +533,7 @@ footer {
     position: absolute;
     border: 2px solid rgb(175, 24, 24);
     top: 0;
-    right: 0;
+    left: 0;
     width: 120px;
     transform: translateY(-30%);
     border-radius: 50%;
