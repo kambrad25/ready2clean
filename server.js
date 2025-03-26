@@ -18,6 +18,7 @@ const mongoose = require("mongoose");
 const sessions = require("express-session");
 const client = require("./Models/Client");
 const nodeMailer = require("nodemailer");
+const MemoryStore = require("memorystore");
 require("dotenv").config();
 
 
@@ -46,6 +47,12 @@ app.use(cors(
 
 app.use(sessions(
     {
+        cookie: { maxAge: 86400000},
+        store: new MemoryStore(
+            {
+                checkPeriod: 86400000
+            }
+        ),
         secret: process.env.SECRET,
         saveUninitialized: false,
         resave: false,
